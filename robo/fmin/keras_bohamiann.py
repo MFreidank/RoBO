@@ -3,6 +3,9 @@ import numpy as np
 import sys
 from os.path import dirname, join as path_join
 sys.path.insert(0, path_join(dirname(__file__), "../../../../pysgmcmc_keras/"))
+# For usage on cluster via pysgmcmc_experiments -- there we want pysgmcmc to
+# *always* come from the experiments repository submodule
+sys.path.insert(0, path_join(dirname(__file__), "../../../pysgmcmc_development"))
 
 from pysgmcmc.models.bayesian_neural_network import BayesianNeuralNetwork
 from pysgmcmc.optimizers.sghmc2 import SGHMC
