@@ -1,7 +1,12 @@
 import logging
 import numpy as np
+import sys
+from os.path import dirname, join as path_join
+sys.path.insert(0, path_join(dirname(__file__), ".."))
+sys.path.insert(0, path_join(dirname(__file__), "../../../pysgmcmc_keras"))
 
-from robo.fmin import bohamiann
+from robo.fmin.keras_bohamiann import bohamiann
+# from robo.fmin import bohamiann
 
 logging.basicConfig(level=logging.INFO)
 
